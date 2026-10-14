@@ -6,6 +6,7 @@ All notable changes to DS Bot are listed here. The format follows [Keep a Change
 
 ### Added
 
+- **Docker**: the new `docker/` directory builds an image with DSH Web and DS Bot for a NAS or another always-on machine, with a Compose file and a README. The container is the Bots' sandbox: the image offers only the full-access permission preset, since DSH's own Linux sandbox does not run inside Docker on most NAS kernels. Data lives in a `/data` volume and the Bots work in `/workspace`; a rebuilt image updates the plugin in an existing volume on start.
 - **Working folder**: a Bot can work directly in a folder you choose instead of the team workspace. Set it in the Bot's settings or details panel: type a path, pick one of your DSH projects, or browse. A group chat can set one folder for all its members there. You can also ask a Bot to change its own folder, or a Main Bot to change any Bot's or group's folder. A Bot that sets a folder outside the team workspace, or adds a Bot to a group that works in one, asks for your approval first when those Bots can only write in their folder. After a change, the Bot's chat goes on in a fresh part that starts in the new folder.
 
 ### Fixed

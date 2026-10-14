@@ -9,3 +9,8 @@ node_modules/
 .dsh-home/
 /shots/
 .playwright-mcp/
+
+# Local Docker deployment data.
+/docker/data/
+/docker/workspace/
+/docker/.env
